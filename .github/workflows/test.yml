@@ -1,4 +1,4 @@
-name: Manually trigger an Azure Machine Learning job
+name: My job
 
 on: push
 
@@ -10,7 +10,4 @@ jobs:
       uses: actions/checkout@main
     - name: Install az ml extension
       run: az extension add -n ml -y
-    - name: Azure login
-      uses: azure/login@v1
-      with:
-        creds: ${{secrets.AZURE_CREDENTIALS}}
+
